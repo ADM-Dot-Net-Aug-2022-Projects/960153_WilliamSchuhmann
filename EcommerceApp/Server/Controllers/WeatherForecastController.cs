@@ -1,4 +1,3 @@
-using EcommerceApp.Shared;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApp.Server.Controllers
