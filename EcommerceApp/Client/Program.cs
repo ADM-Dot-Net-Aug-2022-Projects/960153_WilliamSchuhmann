@@ -1,6 +1,8 @@
 global using EcommerceApp.Shared;
 global using System.Net.Http.Json;
 global using EcommerceApp.Client.Services.ProductService;
+global using EcommerceApp.Client.Services.CategoryService;
+
 using EcommerceApp.Client;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
