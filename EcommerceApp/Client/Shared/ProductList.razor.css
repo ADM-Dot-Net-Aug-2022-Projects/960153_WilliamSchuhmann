@@ -10,14 +10,14 @@
     transform: scale(1.1);
 }
 
-.media{
+/*.media{
     display:flex;
     align-items: flex-start;
 }
 
 .media-body{
     flex: 1;
-}
+}*/
 
 
 .media-img-wrapper{
