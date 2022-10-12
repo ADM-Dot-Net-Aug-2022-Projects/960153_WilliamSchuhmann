@@ -6,6 +6,5 @@ namespace EcommerceApp.Client.Services.ProductService
     {
         List<Product> Products { get; set; }
         Task GetProducts();
-
     }
 }
