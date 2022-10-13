@@ -3,8 +3,9 @@ global using Microsoft.EntityFrameworkCore;
 global using EcommerceApp.Server.Data;
 global using EcommerceApp.Server.Services.ProductService;
 global using EcommerceApp.Server.Services.CategoryService;
-using Microsoft.AspNetCore.ResponseCompression;
+global using EcommerceApp.Server.Services.CartService;
 
+using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICartService, CartService>();
+
 
 var app = builder.Build();
 
