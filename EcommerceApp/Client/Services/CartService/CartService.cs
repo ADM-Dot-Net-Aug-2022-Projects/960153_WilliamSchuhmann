@@ -21,6 +21,7 @@ namespace EcommerceApp.Client.Services.CartService
             }
             cart.Add(cartItem);
             await localStorage.SetItemAsync("cart", cart);
+            OnChange.Invoke();
         }
 
         public async Task<List<CartItem>> GetCartItems()
