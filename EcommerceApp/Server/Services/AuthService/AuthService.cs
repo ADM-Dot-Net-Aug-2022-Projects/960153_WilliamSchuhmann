@@ -6,7 +6,7 @@ namespace EcommerceApp.Server.Services.AuthService
     public class AuthService : IAuthService
     {
         private readonly DataContext context;
-        public AuthService()
+        public AuthService(DataContext context)
         {
             this.context = context;
         }
@@ -29,7 +29,7 @@ namespace EcommerceApp.Server.Services.AuthService
             context.Users.Add(user);
             await context.SaveChangesAsync();
 
-            return new ServiceResponse<int> { Data = user.Id };
+            return new ServiceResponse<int> { Data = user.Id, Message="Registration Successful!" };
         }
 
         public async Task<bool> UserExists(string email)

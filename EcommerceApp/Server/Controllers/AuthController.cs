@@ -15,11 +15,13 @@ namespace EcommerceApp.Server.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegister request)
         {
-            var response = await authService.Register(new Shared.User
-            {
-                Email = request.Email
-            }, 
-            request.Password);
+            var response = await authService.Register(
+                new User
+                {
+                    Email = request.Email
+                }, 
+                request.Password);
+
             if (!response.Success)
             {
                 return BadRequest(response);
